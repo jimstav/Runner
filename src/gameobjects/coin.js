@@ -1,4 +1,4 @@
-export class Coin extends Phaser.GameObjects.Sprite {
+class Coin extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y) {
     super(scene, x, y, 'coin');
     scene.add.existing(this);
@@ -30,3 +30,5 @@ export class Coin extends Phaser.GameObjects.Sprite {
     this.play({ key: 'coin', repeat: -1 });
   }
 }
+
+export default Coin;

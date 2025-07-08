@@ -1,4 +1,4 @@
-export class Obstacle extends Phaser.GameObjects.Rectangle {
+class Obstacle extends Phaser.GameObjects.Rectangle {
   constructor(scene, x, y) {
     super(scene, x, y, 32, 32, 0xff0000);
     scene.add.existing(this);
@@ -19,3 +19,5 @@ export class Obstacle extends Phaser.GameObjects.Rectangle {
     });
   }
 }
+
+export default Obstacle;

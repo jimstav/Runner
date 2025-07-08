@@ -1,6 +1,6 @@
-import Cloud from './cloud.js';
-import Obstacle from './obstacle.js';
-import Coin from './coin.js';
+import Cloud from './cloud';
+import Obstacle from './obstacle';
+import Coin from './coin';
 
 export default class Generator {
   constructor(scene) {
