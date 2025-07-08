@@ -1,6 +1,6 @@
 // import Phaser from '../phaser.js';
 import { Game } from './scenes/game.js';
-// import { GameOver } from './scenes/gameover';
+import { GameOver } from './scenes/gameover.js';
 
 const config = {
   width: 600,
@@ -15,13 +15,10 @@ const config = {
     default: 'arcade',
     arcade: {
       gravity: { y: 350 },
-      debug: true,
+      debug: false,
     },
   },
-  scene: [
-    Game,
-    //GameOver
-  ],
+  scene: [Game, GameOver],
 };
 
 const game = new Phaser.Game(config);

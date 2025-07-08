@@ -3,7 +3,7 @@ import Generator from '../gameobjects/generator.js';
 
 export class Game extends Phaser.Scene {
   constructor() {
-    super({ key: 'game' });
+    super({ key: 'Game' });
     this.player = null;
     this.score = 0;
     this.scoreText = null;
@@ -146,8 +146,8 @@ export class Game extends Phaser.Scene {
   finishScene() {
     this.theme.stop();
     this.playAudio('dead');
-    this.registry.set(`score ${this.score}`);
-    this.scene.start('gameover');
+    this.registry.set('score', '' + this.score);
+    this.scene.start('GameOver');
   }
 
   updateScore(points = 1) {
