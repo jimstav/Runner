@@ -1,7 +1,7 @@
-import Player from '../gameobjects/player';
-import Generator from '../gameobjects/generator';
+import Player from '../gameobjects/player.js';
+import Generator from '../gameobjects/generator.js';
 
-export default class Game extends Phaser.Scene {
+export class Game extends Phaser.Scene {
   constructor() {
     super({ key: 'game' });
     this.player = null;
@@ -73,13 +73,13 @@ export default class Game extends Phaser.Scene {
     this.loadAudios();
     this.playMusic();
 
-    this.input.on('pointerdown', pointer => this.jump(), this);
+    this.input.on('pointerdown', (pointer) => this.jump(), this);
 
     this.updateScoreEvent = this.time.addEvent({
       delay: 100,
       callback: () => this.updateScore(),
       callbackScope: this,
-      loop: true
+      loop: true,
     });
   }
 
@@ -99,7 +99,7 @@ export default class Game extends Phaser.Scene {
       jump: this.sound.add('jump'),
       coin: this.sound.add('coin'),
       dead: this.sound.add('dead'),
-    }
+    };
   }
 
   playAudio(key) {
@@ -116,7 +116,7 @@ export default class Game extends Phaser.Scene {
       detune: 0,
       seek: 0,
       loop: true,
-      delay: 0
+      delay: 0,
     });
   }
 
